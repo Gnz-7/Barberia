@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="{%static 'formularios.css'%}">
+    
+</head>
+<body>
+    
+    <form action="" method="post" class="formulario-registro">
+        <h2 class="titulo-formulario">Registro</h2>
+        {% csrf_token %}
+        <div class="campos-formulario">
+            {{ datos }}
+        </div>
+        <input type="submit" value="Registrarse" class="boton-formulario">
+    </form>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* Fondo general */
+
+
+
+/* Título */
+.titulo-formulario {
+    font-size: 2.2rem;
+    color: #070707;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* Formularios generales */
+.formulario-registro {
+    background-color: rgba(255, 255, 255, 0.92); /* blanco claro visible */
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Campos del formulario */
+.campos-formulario p {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.campos-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #080808;
+}
+
+.campos-formulario input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #accff1;
+    color: #333;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.campos-formulario input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #4a90e2;
+}
+
+/* Botón */
+.boton-formulario {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    background-color: #041b81;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-formulario:hover {
+    background-color: #089b21;
+    transform: scale(1.02);
+}
+
+/* Mensaje de error */
+.error-formulario {
+    margin-top: 15px;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .formulario-login,
+    .formulario-registro {
+        padding: 20px;
+    }
+
+    .titulo-formulario {
+        font-size: 1.8rem;
+    }
+}

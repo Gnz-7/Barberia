@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loby</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+
+</head>
+<body>
+    <div class="contenedor">
+        <div class="div-bienvenida">
+            <h1>AgendaBarber</h1>
+            <h2>Software de gestión de turnos</h2>
+            <img src="{% static 'img/barber.webp' %}" alt="barber">
+            <br>
+            <a href="{% url 'register' %}">Registrate</a>
+        </div>
+
+        <div class="div-login">
+            <form method="post" class="formulario-login">
+                <h2 class="titulo-formulario">Iniciar sesión</h2>
+                {% csrf_token %}
+                <div class="campos-formulario">
+                    {{ form.as_p }}
+                </div>
+                <button type="submit" class="boton-formulario">Iniciar sesión</button>
+
+                {% if form.errors %}
+                    <p class="error-formulario">Usuario o contraseña incorrectos.</p>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</body>
+</html>
