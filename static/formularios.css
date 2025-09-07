@@ -1,5 +1,14 @@
 /* Fondo general */
-
+body {
+    margin: 10px; padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #440572, #541d5e, #07079e);
+       /* Fondo degradado azul-violeta */ 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /* Título */

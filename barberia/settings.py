@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'registro'
+    'registro',
+    'turnos'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'barberia.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates', 'templates_registro'],
+        'DIRS': ['template_index', 'templates_dias', 'templates_inicio'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,6 +69,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'barberia.wsgi.application'
+
+
+LOGIN_REDIRECT_URL = 'inicio'
 
 
 # Database

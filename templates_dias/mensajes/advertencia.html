@@ -1,0 +1,16 @@
+{%extends 'inicio.html'%}
+
+{%block title%}Reserva Sabado{%endblock%}
+
+
+{% load static %}
+
+
+{%block content%}
+    <div class="contenido-centro">
+        <h2>{{ mensaje }}</h2>
+        <p>Si necesitás modificar o cancelar tu reserva, por favor comunicate directamente con tu barbero. ¡Gracias por tu comprensión!</p>
+        
+        <a href="{% url 'inicio'%}" class="boton boton-secundario">Volver</a>
+    </div>
+{%endblock%}

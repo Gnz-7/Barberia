@@ -1,0 +1,21 @@
+{%extends 'inicio.html'%}
+
+{%block title%}Sabado{%endblock%}
+
+{%block content%}
+    <div class="contenedor-principal">
+        <h2>Turnos disponibles para el Sabado</h2>
+
+        {% if horarios %}
+
+            {%for i in horarios%}
+                <a href="{%url 'reserva_sabado' i.id%}"><li>{{i}}</li></a>
+            {%endfor%}
+
+        {% else %}
+            <div class="contenido-centro">
+                <h2>No hay turnos disponibles</h2>
+            </div>
+        {% endif %}
+    </div>
+{%endblock%}

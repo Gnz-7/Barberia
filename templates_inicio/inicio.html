@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Inicio{% endblock %}</title>
+    {% block css %}<link rel="stylesheet" href="{% static 'inicio.css' %}"> {%endblock%}
+</head>
+<body>
+
+    {% include 'layout/base.html' %}
+
+    {% block content %}
+        <div class="contenedor-principal">
+        
+            <h2 class="titulo-bienvenida">¡Bienvenido, {{ user.username }}!</h2>
+            <hr>
+            <p class="parrafo-informacion">
+                Estás a un paso de tu próximo corte. Elegí el turno que mejor te quede y te esperamos en la barbería.
+            </p>
+
+            <div class="texto-importante">
+                <p><strong>Importante:</strong> Solo podés reservar <u>un turno por día</u>. Asegurate de elegir el horario adecuado.</p>
+            </div>
+        </div>
+    {% endblock %}
+
+</body>
+</html>
