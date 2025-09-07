@@ -5,10 +5,25 @@ from . import views
 
 urlpatterns = [
     path('inicio/', views.inicio, name='inicio'),
+    
+    path('lunes/', views.lunes, name='lunes'),
+    path('reserva_lunes/<int:turno_id>/', views.reserva_lunes, name='reserva_lunes'),
+    
+    path('martes/', views.martes, name='martes'),
+    path('reserva_martes/<int:turno_id>/', views.reserva_martes, name='reserva_martes'),
+    
+    path('miercoles/', views.miercoles, name='miercoles'),
+    path('reserva_miercoles/<int:turno_id>/', views.reserva_miercoles, name='reserva_miercoles'),
+    
+    path('jueves/', views.jueves, name='jueves'),
+    path('reserva_jueves/<int:turno_id>/', views.reserva_jueves, name='reserva_jueves'),
+    
     path('viernes/', views.viernes, name='viernes'),
     path('reserva_viernes/<int:turno_id>/', views.reserva_viernes, name='reserva_viernes'),
+    
     path('sabado/', views.sabado, name='sabado'),
     path('reserva_sabado/<int:turno_id>/', views.reserva_sabado, name='reserva_sabado'),
+    
     path('exito/', views.exito, name='exito'),
     path('advertencia/<str:dia>/', views.advertencia,name='advertencia')
 ]

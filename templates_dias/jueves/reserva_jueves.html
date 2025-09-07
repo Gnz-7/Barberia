@@ -1,0 +1,18 @@
+{%extends 'inicio.html'%}
+
+{%block title%}Reserva Jueves{%endblock%}
+
+
+{% load static %}
+
+
+{%block content%}
+    <div class="contenido-centro">
+        <h2>¿Deseas reservar para el Jueves a las {{turno}}?</h2>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Reservar</button>
+        </form>
+    </div>
+    
+{%endblock%}

@@ -37,6 +37,19 @@
     transition: background-color 0.3s, transform 0.2s;
 }
 
+
+.link-izquierda {
+    background-color: #c0392b;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.4em 0.8em;
+    border-radius: 5px;
+    text-decoration: none;
+    position: absolute; /* Sácala del flujo */
+    left: 2em;         /* Igual que el padding de barra */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
 .link-derecha:hover {
     background-color: #c0392b;
     transform: scale(1.05);

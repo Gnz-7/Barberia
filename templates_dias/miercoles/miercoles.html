@@ -1,0 +1,23 @@
+{% extends 'inicio.html' %}
+
+{% block title %}Miercoles{% endblock %}
+
+{% block content %}
+    <div class="contenedor-principal">
+        <h2>Turnos disponibles para el Miercoles</h2>
+
+        {% if horarios %}
+            
+            {% for i in horarios %}
+                <a href="{% url 'reserva_miercoles' i.id %}"><li>{{ i }}</li></a>
+            {% endfor %}
+
+        {% else %}
+
+            <div class="contenido-centro">
+                <h2>No hay turnos disponibles</h2>
+            </div>
+            
+        {% endif %}
+    </div>
+{% endblock %}
