@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Inicio{% endblock %}</title>
-    {% block css %}<link rel="stylesheet" href="{% static 'inicio.css' %}"> {%endblock%}
+
+    {% block styles %}
+    <link rel="stylesheet" href="{% static 'navegador.css' %}">
+    <link rel="stylesheet" href="{% static 'inicio.css' %}">
+    {% endblock %}
 </head>
 <body>
 
-    {% include 'layout/base.html' %}
+    {% include 'layout/navegador.html' %}
 
     {% block content %}
         <div class="contenedor-principal">

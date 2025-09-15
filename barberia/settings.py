@@ -56,7 +56,7 @@ ROOT_URLCONF = 'barberia.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['template_index', 'templates_dias', 'templates_inicio'],
+        'DIRS': ['template_index', 'templates_dias', 'templates_inicio', 'templates_menu'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

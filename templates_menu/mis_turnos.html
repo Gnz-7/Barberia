@@ -1,0 +1,50 @@
+{% extends 'inicio.html' %}
+
+{% load static %}
+
+{% block title %}Mis Turnos{% endblock %}
+
+{% block styles %} 
+    <link rel="stylesheet" href="{% static 'navegador.css' %}">
+    <link rel="stylesheet" href="{% static 'inicio.css' %}">
+    <link rel="stylesheet" href="{% static 'turnos.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="contenedor-columnas">
+        <div class="columna columna-uno">
+            <h2>Lunes</h2>
+            <br>
+            {{ mensajes.lunes }}
+        </div>
+        <div class="columna columna-dos">
+            <h2>Martes</h2>
+            <br>
+            {{ mensajes.martes }}
+        </div>
+        <div class="columna columna-tres">
+            <h2>Miércoles</h2>
+            <br>
+            {{ mensajes.miercoles }}
+        </div>
+    </div>
+
+    <div class="contenedor-columnas">
+        <div class="columna columna-uno">
+            <h2>Jueves</h2>
+            <br>
+            {{ mensajes.jueves }}
+        </div>
+        <div class="columna columna-dos">
+            <h2>Viernes</h2>
+            <br>
+            {{ mensajes.viernes }}
+        </div>
+        <div class="columna columna-tres">
+            <h2>Sábado</h2>
+            <br>
+            {{ mensajes.sabado }}
+        </div>
+    </div>
+
+{% endblock %}

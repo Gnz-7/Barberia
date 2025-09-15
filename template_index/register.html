@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="{%static 'formularios.css'%}">
     
 </head>
-<body>
+<body class="body-registro">
     
-    <form action="" method="post" class="formulario-registro">
-        <h2 class="titulo-formulario">Registro</h2>
-        {% csrf_token %}
-        <div class="campos-formulario">
-            {{ datos }}
-        </div>
-        <input type="submit" value="Registrarse" class="boton-formulario">
-    </form>
+    <div class="contenedor-registro">
+        <form action="" method="post" class="formulario-registro">
+            <h2 class="titulo-formulario">Registro</h2>
+            {% csrf_token %}
+            <div class="campos-formulario">
+                {{ datos }}
+            </div>
+            <input type="submit" value="Registrarse" class="boton-formulario">
+        </form>
+    </div>
+    
 </body>
 </html>

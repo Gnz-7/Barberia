@@ -1,0 +1,51 @@
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static 'navegador.css' %}">
+<nav class="barra-navegacion">
+    <a href="{%url 'inicio'%}" class="link-izquierda">Inicio</a>
+
+    <a href="{%url 'lunes'%}" class="link-centro lunes">Lunes</a>
+    <a href="{%url 'martes'%}" class="link-centro martes">Martes</a>
+    <a href="{%url 'miercoles'%}" class="link-centro miercoles">Miercoles</a>
+    <a href="{%url 'jueves'%}" class="link-centro jueves">Jueves</a>
+    <a href="{%url 'viernes'%}" class="link-centro viernes">Viernes</a>
+    <a href="{%url 'sabado'%}" class="link-centro sabado">Sábado</a>
+    
+    
+
+
+    <div class="menu-usuario">
+
+        <svg id="iconoUsuario" class="icono-usuario" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24" fill="#ffffff">
+            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+        </svg>
+
+        <div id="menuDesplegable" class="menu-desplegable">
+            <a href="{%url 'mis_turnos'%}">Mis Turnos</a>
+            <a href="{%url 'ver_perfil' request.user.id%}">Ver perfil</a>
+            <a href="{% url 'salir' %}">Cerrar sesión</a>
+        </div>
+    </div>
+
+</nav>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const icono = document.getElementById('iconoUsuario');
+        const menu = document.getElementById('menuDesplegable');
+
+        icono.addEventListener('click', function (e) {
+            e.stopPropagation();
+            // Alternar visibilidad
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Ocultar menú al hacer clic fuera
+        document.addEventListener('click', function () {
+            menu.style.display = 'none';
+        });
+    });
+</script>

@@ -25,5 +25,15 @@ urlpatterns = [
     path('reserva_sabado/<int:turno_id>/', views.reserva_sabado, name='reserva_sabado'),
     
     path('exito/', views.exito, name='exito'),
-    path('advertencia/<str:dia>/', views.advertencia,name='advertencia')
+    path('advertencia/<str:dia>/', views.advertencia,name='advertencia'),
+    
+    path('mis_turnos/', views.mis_turnos, name='mis_turnos'),
+    
+    path('ver_perfil/<int:usuario_id>/', views.ver_perfil, name='ver_perfil'),
+    path('editar/<int:usuario_id>/', views.editar, name='editar'),
+    path('cambiar_password/<int:usuario_id>/', views.cambiar_password, name='cambiar_password' ),
+    path('exito_datos/', views.exito_datos, name='exito_datos')
+
+    
+    
 ]

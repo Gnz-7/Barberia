@@ -1,0 +1,20 @@
+{%extends 'inicio.html'%}
+
+{%block title%}Ver Perfil{%endblock%}
+
+{%block content%}
+
+    <div class="contenedor-principal editar">
+        <h2>Perfil</h2>
+
+        {%for i in ver%}
+            <li><b>Nombre de Usuario:</b> {{i.username}}</li>
+            <li><b>Email:</b> {{i.email}}</li>
+        {%endfor%}
+
+        <a href="{% url 'editar' request.user.id%}">Editar</a>
+        <a href="{% url 'cambiar_password' request.user.id%}">Cambiar Contraseña</a>
+
+    </div>
+
+{%endblock%}
