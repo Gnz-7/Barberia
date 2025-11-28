@@ -1,0 +1,147 @@
+/* ===========================
+   Contenedor principal
+=========================== */
+.contenedor {
+    display: flex;
+    flex-direction: row; /* Horizontal en desktop */
+    min-height: 100vh;   /* Altura total de la pantalla */
+    gap: 20px;           /* Separación entre divs */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* ===========================
+   Div Bienvenida (verde)
+=========================== */
+.div-bienvenida {
+    flex: 1; /* Ocupa mitad del espacio */
+    background: linear-gradient(135deg, #027979, #028b4b, #056901);
+    color: white;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3), 0 0 15px rgba(0,0,0,0.3);
+    border-radius: 20px;
+}
+
+/* Título */
+.div-bienvenida h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+/* Subtítulo */
+.div-bienvenida h2 {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #f2f2f2;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Imagen */
+.div-bienvenida img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.div-bienvenida img:hover {
+    transform: scale(1.05);
+}
+
+/* Botón */
+.div-bienvenida a {
+    display: inline-block;
+    background-color: #3d3c3c;
+    color: #f8f3f3;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #088b04;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+}
+
+.div-bienvenida a:hover {
+    background-color: #040fa1;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ===========================
+   Div Login (violeta/azul)
+=========================== */
+.div-login {
+    flex: 1;
+    background: linear-gradient(135deg, #330257, #640aa3, #0101a8);
+    box-shadow: inset 0 0 40px rgba(75,0,130,0.4),
+                inset 0 0 30px rgba(0,0,139,0.3);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+/* ===========================
+   Responsive (Móviles)
+=========================== */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column; /* Apilar verticalmente */
+        min-height: auto;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .div-bienvenida,
+    .div-login {
+        flex: none;
+        width: 100%;
+        max-width: 500px; /* Limita el ancho para que no se estire demasiado */
+        border-radius: 20px;
+        padding: 30px 20px; /* Ajusta el padding */
+        box-sizing: border-box;
+    }
+
+    /* Títulos adaptados */
+    .div-bienvenida h1 {
+        font-size: 2rem;  /* Escala proporcional del h1 */
+        line-height: 1.2; /* Ajusta altura de línea para que no se salga */
+    }
+
+    .div-bienvenida h2 {
+        font-size: 1rem;  /* Escala proporcional del h2 */
+        line-height: 1.2;
+    }
+
+    /* Imagen adaptada */
+    .div-bienvenida img {
+        max-width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    /* Botón adaptado */
+    .div-bienvenida a {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+

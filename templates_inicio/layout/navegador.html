@@ -1,7 +1,7 @@
 {% load static %}
 
 
-<link rel="stylesheet" href="{% static 'navegador.css' %}">
+<link rel="stylesheet" href="{% static 'turnos/navegador.css' %}">
 <nav class="barra-navegacion">
     <a href="{%url 'inicio'%}" class="link-izquierda">Inicio</a>
 
@@ -39,13 +39,28 @@
 
         icono.addEventListener('click', function (e) {
             e.stopPropagation();
-            // Alternar visibilidad
             menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
         });
 
-        // Ocultar menú al hacer clic fuera
         document.addEventListener('click', function () {
             menu.style.display = 'none';
         });
+
+        // ======= RESALTAR DÍA DE LA PÁGINA ACTUAL =======
+        // Obtenemos la URL actual
+        const url = window.location.href.toLowerCase();
+
+        // Array con nombres de días y clases correspondientes
+        const dias = ['lunes','martes','miercoles','jueves','viernes','sabado'];
+
+        dias.forEach(dia => {
+            if(url.includes(dia)) {
+                const enlaceDia = document.querySelector(`.link-centro.${dia}`);
+                if(enlaceDia) {
+                    enlaceDia.classList.add('activo');
+                }
+            }
+        });
     });
+
 </script>
