@@ -1,0 +1,53 @@
+/* Contenedor centrado estilo tarjeta */
+.contenedor-perfil {
+    max-width: 400px;
+    margin: 50px auto;              /* centra horizontal y separa vertical */
+    padding: 30px 25px;
+    background-color: #f5f5f5;      /* fondo claro */
+    border-radius: 12px;            /* esquinas redondeadas */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* sombra sutil */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Título */
+.contenedor-perfil h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Lista de datos */
+.lista-datos {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.lista-datos li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Contenedor de botones */
+.botones-perfil {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Estilo de botones */
+.btn-perfil {
+    background-color: #1abc9c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-perfil:hover {
+    background-color: #16a085;
+    transform: scale(1.05);
+}

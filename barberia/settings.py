@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'registro',
-    'turnos'
+    'turnos',
+    'menu',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'barberia.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['template_index', 'templates_dias', 'templates_inicio', 'templates_menu'],
+        'DIRS': ['template_registro', 'templates_dias', 'templates_inicio', 'templates_menu'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
